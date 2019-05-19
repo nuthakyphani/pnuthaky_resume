@@ -1,2 +1,4 @@
-# pnuthaky_resume
-My Interactive resume
+Phani Nuthaky-resume
+===================
+
+My personal interactive resume - https://www.phaninuthaky.com

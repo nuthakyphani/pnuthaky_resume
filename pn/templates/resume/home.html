@@ -1,0 +1,606 @@
+{% extends "base.html" %}
+
+{% block page_title %}Resume{% endblock page_title %}
+
+{% block meta_tags %}
+<meta name="dcterms.language" content="en" />
+<meta name="dcterms.title" content="Phani Nuthaky" />
+<meta name="dcterms.description" content="I am Phani Nuthaky. Software Engineer by Passion, with a focus on web development and testing." />
+<meta name="description" content="I am Phani Nuthaky. Software Engineer by passion, with a focus on web development." />
+<meta name="keywords" content="Phani Nuthaky, Interactive Resume, Software engineer, Python programmer, Python, Django, Web developer, Startup, CV, Resume" />
+{% endblock meta_tags %}
+
+{% block body_id %}id_home{% endblock body_id %}
+{% block body_data_controller %}home{% endblock body_data_controller %}
+
+{% block body %}
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navbar-pnuthaky">
+  <div class="container">
+    <a class="navbar-brand goto" href="#top"><img src="{{ asset_url('img/m.svg') }}" alt="N" width="20" height="20" />&nbsp;&nbsp;<span class="light">PHANI</span>&nbsp;NUTHAKY</a>
+    <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+        <li class="hidden"><a href="#top"></a></li>
+        <li class="nav-item"><a class="nav-link goto" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link goto" href="#resume">Resume</a></li>
+        <li class="nav-item"><a class="nav-link goto" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link goto" href="#interests">Interests</a></li>
+        <li class="nav-item"><a class="nav-link goto" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Intro section -->
+<header id="intro">
+  <div class="overlay"></div>
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ml-auto mr-auto">
+          <h1 class="brand-heading">Phani Nuthaky</h1>
+          <p class="intro-text">Software Engineer by Passion</p>
+          <a href="#about" class="btn btn-scroll goto"><i class="fa fa-angle-double-down"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Profile section -->
+<section id="about" class="container content-section" itemscope itemtype="http://data-vocabulary.org/Person">
+  <div class="row">
+    <div class="col-lg-10 ml-auto mr-auto content">
+      <h2 class="text-center">Profile</h2>
+      <p class="lead text-center">I'm a developer, software engineer, mechanical engineer, leader</p>
+      <hr />
+      <div class="row">
+        <div class="col-md-4">
+          <h3>About me</h3>
+          <p class="text-justify">I am a <span itemprop="title">Software Engineer</span> with a focus on web development and testing. Recently, I've been working in the fields of backend and frontend web development and testing. I love trying out opensource software and building software which makes our everyday life easy</p>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center avatar-wrapper" data-sr="enter right, roll 180deg, over 0.5s">
+            <img src="{{ asset_url('img/avatar.jpg') }}" class="avatar" alt="Phani Nuthaky" />
+          </div>
+        </div>
+        <div class="col-md-4 general-information">
+          <h3>General information</h3>
+          <p>
+            <b>Full name:</b><br />
+            <span itemprop="name">Phani Nuthaky</span>
+          </p>
+          <p>
+            <b>Age:</b><br />
+            {{ age }} years old
+          </p>
+          <p>
+            <b>Location:</b><br />
+            Morrisville, NC
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experiences section -->
+<div class="green-background">
+  <section id="resume" class="container content-section">
+    <div class="row">
+      <div class="col-lg-10 ml-auto mr-auto content">
+        <h2 class="text-center">Resume</h2>
+        <p class="lead text-center">My education and experience</p>
+        <hr />
+        <h3>Education</h3>
+        <div class="mt-3 row">
+          <div class="col-md-4">
+            <h4>Lamar&nbsp;University</h4>
+            <p>2013&nbsp;&ndash;&nbsp;2015</p>
+          </div>
+          <div class="col-md-8">
+            <p class="mt-0 diploma-title">Master's degree in Business Administration</p>
+            <p>Master's Degree in Business Administration
+            <div class="tags">
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Team Leadership</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Personal Leadership</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Strategic Management</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Supply Chain Management</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Marketing Management</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Human Resource Management</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;E-Commerce</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;E-Marketing</span>
+            </div>
+            <p class="metadata"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Beaumont, TX&nbsp;&#124;&nbsp;<i class="fa fa-link"></i>&nbsp;&nbsp;<a href="http://www.lamar.edu/" target="_blank">Lamar.edu</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Lamar&nbsp;University</h4>
+            <p>2008&nbsp;&ndash;&nbsp;2010</p>
+          </div>
+          <div class="col-md-8">
+            <p class="mt-0 diploma-title">Master's degree in Engineering</p>
+            <p>Master's Degree in Mechanical Engineering
+            <div class="tags">
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Manufacturing Analysis</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Applcation Numerical Analysis</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Dynamic Systems Analysis</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Robotics</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Process Selection</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Material Selection</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Control of Mechanical Systems</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;FEA with ANSYS</span>
+            </div>
+            <p class="metadata"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Beaumont, TX&nbsp;&#124;&nbsp;<i class="fa fa-link"></i>&nbsp;&nbsp;<a href="http://www.lamar.edu/" target="_blank">Lamar.edu</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>JNT University</h4>
+            <p>2001&nbsp;&ndash;&nbsp;2005</p>
+          </div>
+          <div class="col-md-8">
+            <p class="mt-0 diploma-title">Bachelor of Technology</p>
+            <p>Bachelors Degree in Mechanical Engineering.
+            <div class="tags">
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;C Programming</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Engineering Mechanics</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Thermodynamics</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Thermal Engineering</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Uncoventional Machining Process</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Nonconventional Sources of Energy</span>
+            </div>
+            <p class="metadata"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Hyderabad, India&nbsp;&#124;&nbsp;<i class="fa fa-link"></i>&nbsp;&nbsp;<a href="http://jntuh.ac.in/" target="_blank">jntuh.ac.in</a></p>
+          </div>
+        </div>
+        <hr />
+        <h3>Experience</h3>
+        <div class="mt-3 row">
+          <div class="col-md-4">
+            <h4>Amensys Inc.</h4>
+            <p>Oct 2015&nbsp;&ndash;&nbsp;Present</p>
+          </div>
+          <div class="col-md-8">
+            <p class="mt-0 job-title">Network Engineer</p>
+            <p>
+              Involved in the development of Test Plan and Test cases. Performed automation for Functional and Regression Testing using Selenium WebDriver and Calabash. Authored about 40 test cases to handle different call flows using the Cisco Spark app on different platforms and maintained them on bitbucket. Configuring static IPs on cisco gateways and configuring static reservations on Windows DNS servers. Deploying VMs on vCenter and supporting development teams with the access to the testbed. Wrote APIs in python to simulate input via keypad on a Cisco phone and generating HTML report.
+            </p>
+            <div class="tags">
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Software Engineering</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Python Development</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Web Development</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Jenkins</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;JIRA</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Calabash</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Docker</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;vCenter</span>
+            </div>
+            <p class="metadata"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Lewisville, TX&nbsp;&#124;&nbsp;<i class="fa fa-link"></i>&nbsp;&nbsp;<a href="https://www.amensys.com" target="_blank">amensys.com</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Pioneer Consulting LLC</h4>
+            <p>Dec 2012&nbsp;&ndash;&nbsp;Mar 2013</p>
+          </div>
+          <div class="col-md-8">
+            <p class="mt-0 job-title">Software Engineer</p>
+            <p>
+              Worked on a migration project where the systems in the organization have
+              upgraded from Windows XP to Windows 7. Tested about 200 applications for
+              compatibility on Windows7. Repackaged the tested applications for
+              deployment.
+            </p>
+            <div class="tags">
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Software Engineering</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Windows7 64-bit, XP</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;AdminStudio 11.0</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;SCCM 2007</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Active Directory 2008</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;VMWare Workstation</span>
+            </div>
+            <p class="metadata"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;West Des Moines, Iowa&nbsp;&#124;&nbsp;<i class="fa fa-link"></i>&nbsp;&nbsp;<a href="http://www.pioneeritconsulting.com/Sites/index.aspx" target="_blank">pioneeritconsulting.com</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>RM Networks Inc.</h4>
+            <p>Sep 2012&nbsp;&ndash;&nbsp;Dec 2012</p>
+          </div>
+          <div class="col-md-8">
+            <p class="mt-0 job-title">Software Engineer</p>
+            <p>
+              Worked on a migration project where the systems in the organization have
+              upgraded from Windows XP to Windows 7. Tested about 200 applications for
+              compatibility on Windows7. Repackaged the tested applications for
+              deployment.
+            </p>
+            <div class="tags">
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Software Engineering</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Windows7 64-bit, XP</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;AdminStudio 11.0</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;SCCM 2007</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Active Directory 2008</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;VMWare Workstation</span>
+            </div>
+            <p class="metadata"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Bellevue, WA&nbsp;&#124;&nbsp;<i class="fa fa-link"></i>&nbsp;&nbsp;<a href="https://www.phaninuthaky.com" target="_blank">rmnetworksinc.com</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>World Class Workforce LP</h4>
+            <p>Jun 2012&nbsp;&ndash;&nbsp;Sep 2012</p>
+          </div>
+          <div class="col-md-8">
+            <p class="mt-0 job-title">Software Engineer</p>
+            <p>
+              Participated in web design meetings and analyzed user needs to determine
+              technical requirements. Developed and maintained websites or web
+              applications involving multiple programming languages. Designed coherent
+              user interfaces consistent with modern web design practices. Wrote and
+              maintained unit tests and design documentation for subsystems and
+              components. Modified, repaired, or expanded programs to correct errors,
+              increase efficiency, upgrade interfaces, or improve performance.
+              Performed testing and analysis on web and systems to identify problems.
+              Evaluated effectiveness of Web applications and systems or
+              potential/existing vendor components.
+            </p>
+            <div class="tags">
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Software Engineering</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Java</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;J2EE</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;HTML</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;SQL</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;PL/SQL</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Oracle</span>
+            </div>
+            <p class="metadata"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Hanover, NH&nbsp;&#124;&nbsp;<i class="fa fa-link"></i>&nbsp;&nbsp;<a href="http://wcwforce.com/" target="_blank">wcwforce.com</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>MicroInfo Inc.</h4>
+            <p>Dec 2011&nbsp;&ndash;&nbsp;Jun 2012</p>
+          </div>
+          <div class="col-md-8">
+            <p class="mt-0 job-title">Programmer Analyst</p>
+            <p>
+              Extracted data from different sources Oracle, SQL Server and Flat files
+              implemented business logic and loaded into the target Warehouse
+              (Oracle). Studied the PL/SQL code developed to relate the source and
+              target mappings. Designed and developed the jobs for Extracting,
+              Transforming, Integrating, and Loading Data using DataStage Designer.
+              Modified existing program logic to improve overall system performance.
+            </p>
+            <div class="tags">
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Software Engineering</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Informatica Power Center 8.6</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Power Exchange 8.6</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Unix</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Autosys</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;File Aid 9.2</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Oracle 10g</span>
+            </div>
+            <p class="metadata"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Plano, TX&nbsp;&#124;&nbsp;<i class="fa fa-link"></i>&nbsp;&nbsp;<a href="http://www.microinfoinc.com/" target="_blank">microinfoinc.com</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Galaxy I Technologies</h4>
+            <p>Mar 2011&nbsp;&ndash;&nbsp;Dec 2011</p>
+          </div>
+          <div class="col-md-8">
+            <p class="mt-0 job-title">Programmer Analyst</p>
+            <p>
+              Worked on an internal payroll application to suggest and implement
+              improvements. Acquired proficiency with the various data base resources
+              and data base management. Ameliorated performance of communication
+              systems, software storage, security, hardware, network, and others.
+              Acquired as well as developed test data, revising program(s) resulting
+              in improved performance.
+            </p>
+            <div class="tags">
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Java</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;J2EE</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Oracle 9i</span>
+            </div>
+            <p class="metadata"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Phoenix, AZ&nbsp;&#124;&nbsp;<i class="fa fa-link"></i>&nbsp;&nbsp;<a href="http://www.galaxyitech.com/" target="_blank">galaxyitech.com</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>SSIT</h4>
+            <p>Jun 2005&nbsp;&ndash;&nbsp;Dec 2007</p>
+          </div>
+          <div class="col-md-8">
+            <p class="mt-0 job-title">Program Instructor and Office Assistant</p>
+            <p>
+              Assisted students with their lab work. Helped undergraduate students
+              with their final project work. Scheduled lab timings for different
+              batches of students.
+            </p>
+            <div class="tags">
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Java</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;J2EE</span>
+              <span class="tag"><i class="fa fa-dot-circle-o"></i>&nbsp;&nbsp;Oracle 9i</span>
+            </div>
+            <p class="metadata"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Vijayawada, India&nbsp;&#124;&nbsp;<i class="fa fa-link"></i>&nbsp;&nbsp;<a href="http://www.ssit.biz/" target="_blank">ssit.biz</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Skills section -->
+<section id="skills" class="container content-section">
+  <div class="row">
+    <div class="col-lg-10 ml-auto mr-auto content">
+      <h2 class="text-center">Skills</h2>
+      <p class="lead text-center">I can say I am good at</p>
+      <hr />
+      <h3>Software development</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Python</span>
+          </p>
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Django Framework</span>
+          </p>
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Flask Framework</span>
+          </p>
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Javascript</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">HTML &amp; CSS</span>
+          </p>
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Bourne shell scripting</span>
+          </p>
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Java</span>
+          </p>
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">C</span>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <h3>Databases / Stores</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">MySQL</span>
+          </p>
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">MongoDB</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Elasticsearch</span>
+          </p>
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Oracle</span>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <h3>DevOps tools</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Docker</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Ansible</span>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <h3>Frontend Libraries and Frameworks</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">React</span>
+          </p>
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">JQuery</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Webpack</span>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <h3>Languages</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Telugu (mother tongue)</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">English</span>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Hindi</span>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <h3>Tools</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">Git</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <span class="skill-check"><i class="fa fa-check-circle"></i></span>
+            <span class="skill-name">SVN</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interests section -->
+<div class="green-background">
+  <section id="interests" class="container content-section">
+    <div class="row">
+      <div class="col-lg-10 ml-auto mr-auto content">
+        <h2 class="text-center">Interests</h2>
+        <p class="lead text-center">In my spare time I like to</p>
+        <hr />
+        <div class="row">
+          <div class="col-sm-4 text-center">
+            <div class="interest-icon-wrapper">
+              <i class="ion-ios-tablet-portrait huge"></i>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="interest-wrapper">
+              <h3>New technologies</h3>
+              <p>
+
+                Technology facinates me, I spend a lot of time on my laptop exploring new advances in the areas of web and computer services which are intended to the professional world or the public.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 text-center">
+            <div class="interest-icon-wrapper">
+              <i class="ion-ios-laptop huge"></i>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="interest-wrapper">
+              <h3>Programming</h3>
+              <p>
+
+                I like learning new tricks on programming by writing some programs. I like building stuff reusing already built ones.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 text-center">
+            <div class="interest-icon-wrapper">
+              <i class="ion-ios-camera huge"></i>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="interest-wrapper">
+              <h3>Photography</h3>
+              <p>
+                I am a hobbiest photographer. I love taking portraits of my daughter and capturing beautiful landscapes.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 text-center">
+            <div class="interest-icon-wrapper">
+              <i class="ion-ios-book huge"></i>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="interest-wrapper">
+              <h3>Reading</h3>
+              <p>
+
+                I love reading articles on the web and some SiFi thillers.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 text-center">
+            <div class="interest-icon-wrapper">
+              <i class="ion-ios-paper-plane huge"></i>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="interest-wrapper">
+              <h3>Travel</h3>
+              <p>
+
+                I love traveling to places with historical importance and places of natural beauty.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="gray-background">
+  <section id="contact" class="container content-section">
+    <div class="row">
+      <div class="col-lg-10 ml-auto mr-auto content">
+        <h2 class="text-center">Contact</h2>
+        <p class="lead text-center">Let's get in touch</p>
+        <hr />
+        <a href="mailto:pnuthaky@gmail.com" class="mailto"><i class="fa fa-envelope-o "></i>&nbsp;pnuthaky@gmail.com</a>
+        <div class="social-links">
+          <a href="https://twitter.com/nuthakyphani" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/phani-nuthaky-26233a158" class="linkedin" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+          <a href="https://github.com/nuthakyphani" class="github" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+      <div class="copy">
+        &copy;&nbsp;2018&#45;{{ current_year }}&nbsp;&nbsp;&nbsp;by Phani Nuthaky
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock body %}

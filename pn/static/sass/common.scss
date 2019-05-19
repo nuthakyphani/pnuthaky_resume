@@ -1,0 +1,34 @@
+//
+// Common styles
+// --------------------------------------------------
+
+
+html, body{
+  width: 100%;
+  font: 1em/1.25 $opensans-font-family;
+}
+
+p{
+  font: 1em/1.25 $opensanslight-font-family;
+  color: lighten($gray, 20%);
+}
+
+.green{
+  color: $pnuthaky-green;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+.beige-background{
+  background: $pnuthaky-beige;
+}
+
+.green-background{
+  background: $pnuthaky-green;
+}
+
+.gray-background{
+  background: $gray-dark;
+}
