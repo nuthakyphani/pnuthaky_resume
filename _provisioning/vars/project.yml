@@ -10,7 +10,7 @@ flask_touch_reload_path: "{{ flask_path }}/.uwsgi_touch"
 flask_requirements_file: "{{ flask_project_path }}/requirements.freeze"
 flask_domain_name: "{{ host_public_domain_name }}"
 flask_disallow_robots: no
-flask_project_repo_url: https://github.com/ellmetha/morganaubert-resume.git
+flask_project_repo_url: https://github.com/nuthakyphani/pnuthaky_resume.git
 flask_ssl_only: yes
 flask_env_variables:
   FLASK_CONFIG: production
