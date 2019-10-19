@@ -20,11 +20,9 @@ debug_toolbar = DebugToolbarExtension()
 def init_app(app):
     """ Initializes the extensions of the application. """
     for extension in (babel, assets, ):
-        print('Inside extensions,assets')
         extension.init_app(app)
 
     # Initializes development extensions if applicable
     if app.debug:
         for extension in (debug_toolbar, ):
             extension.init_app(app)
-            print("Inside extensions")

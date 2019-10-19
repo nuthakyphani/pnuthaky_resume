@@ -8,7 +8,6 @@ from . import extensions, modules
 app = Flask(__name__, static_url_path='/static')
 def create_app(config_name):
     config_obj = config[config_name]()
-    #app = Flask(__name__, static_url_path='/static')
 
     # Initializes configuration values.
     app.config.from_object(config_obj)
@@ -24,13 +23,4 @@ def create_app(config_name):
 
     # Initializes modules.
     modules.init_app(app)
-    print ("returing app")
     return app
-'''
-#app = create_app(os.getenv('FLASK_CONFIG', 'default'))
-if __name__ == "__main__":
-    app = create_app(os.getenv('FLASK_CONFIG', 'default'))
-    #app.run(ssl_context=('/etc/certificates/www.phaninuthaky.com.140F4232D3B6D267534FC8B5A5A13964B8889B73.cert.pem', '/etc/certificates/www.phaninuthaky.com.140F4232D3B6D267534FC8B5A5A13964B8889B73.key.pem'))
-    app.run(ssl_context=('fullchain.pem', 'privkey.pem'))
-    #app.run()
-'''

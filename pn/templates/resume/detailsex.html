@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+   window.onload = function () {
+  // Get all the elements that match the selector as arrays
+  var copyTextBtn = Array.prototype.slice.call(document.querySelectorAll('.js-textcopybtn'));
+  var copyText = Array.prototype.slice.call(document.querySelectorAll('.js-copytext'));
+  var tooltip = Array.prototype.slice.call(document.querySelectorAll('.tooltiptext'));
+  tooltip.innerHTML = "Copied: " + copyText.value;
+
+  // Loop through the button array and set up event handlers for each element
+  copyTextBtn.forEach(function(btn, idx){
+
+    btn.addEventListener("click", function(){
+
+      // Get the text who's index matches the index of the button
+      copyText[idx].select();
+      tooltip[idx].innerHTML = "Copied: " + copyText[idx].value;
+
+      try {
+        var msg = document.execCommand('copy') ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+      } catch (err) {
+        console.log('Whoops, unable to copy');
+      }
+
+    });
+      btn.addEventListener("mouseout", function(){
+
+         tooltip[idx].innerHTML = "Copy to clipboard";
+
+    });
+
+  });
+}
+    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<p>Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards in a different window, to see the effect.</p>
+
+<input class="js-copytext" type="text" value="Hello World" id="myInput1">
+<div class="tooltip">
+<span class="tooltiptext" id="myTooltip1">Copy to clipboard</span>
+<button class="js-textcopybtn" >
+
+  Copy text
+  </button>
+</div>
+<input class="js-copytext" type="text" value="Hello World1" id="myInput2">
+<div class="tooltip">
+<span class="tooltiptext" id="myTooltip2">Copy to clipboard</span>
+
+<button class="js-textcopybtn" >
+
+  Copy text
+  </button>
+</div>
+
+<p>The copy is not supported in IE8 and earlier.</p>
+</body>
+</html>
