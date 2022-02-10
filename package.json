@@ -35,7 +35,7 @@
     "jest": "^23.5.0",
     "less-loader": "^4.1.0",
     "nan": "^2.11.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "raw-loader": "^0.5.1",
     "sass-loader": "^7.1.0",
